@@ -61,7 +61,7 @@ frozenlist==1.8.0
 fsspec==2026.2.0
 
 google-ai-generativelanguage==0.6.15
-google-api-core==2.25.2
+google-api-core
 google-api-python-client==2.192.0
 google-auth==2.49.0
 google-auth-httplib2==0.3.0
@@ -81,6 +81,7 @@ grpcio==1.78.0
 grpcio-status>=1.75.1,<2.0
 
 protobuf>=5.26,<6.0
+
 
 gunicorn==23.0.0
 h11==0.16.0
