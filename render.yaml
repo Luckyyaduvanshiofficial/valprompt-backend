@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: valprompt-api
+    env: python
+    buildCommand: "pip install -r requirements.txt && python manage.py migrate"
+    startCommand: "gunicorn prompt_generator.wsgi:application"
+    envVars:
+      - key: DEBUG
+        value: "False"
+      - key: REQUIRE_AUTH
+        value: "True"
+      - key: ALLOWED_HOSTS
+        value: "*"
+      - key: DATABASE_URL
+        sync: false
+      - key: GEMINI_API_KEY
+        sync: false
