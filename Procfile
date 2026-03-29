@@ -1,1 +1,1 @@
-web: gunicorn your_project.wsgi:application --bind 0.0.0.0:$PORT
+web: gunicorn valprompt.wsgi:application --bind 0.0.0.0:$PORT
