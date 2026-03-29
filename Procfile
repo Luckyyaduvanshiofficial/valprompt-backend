@@ -1,1 +1,1 @@
-web: gunicorn valprompt.wsgi:application --bind 0.0.0.0:$PORT
+web: gunicorn prompt_generator.wsgi:application --log-file -
