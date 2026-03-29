@@ -80,7 +80,7 @@ grpc-google-iam-v1==0.14.3
 grpcio==1.78.0
 grpcio-status==1.71.2
 
-# FIXED PROTOBUF (CRITICAL)
+# ✅ FIXED
 
 protobuf>=5.26,<6.0
 
@@ -159,7 +159,11 @@ redis==7.3.0
 referencing==0.37.0
 regex==2026.2.28
 requests==2.32.5
-rich==13.9.4
+
+# ✅ FIXED (IMPORTANT)
+
+rich>=13.0,<15.0
+
 rpds-py==0.30.0
 rq==2.7.0
 rsa==4.9.1
@@ -187,10 +191,3 @@ uritemplate==4.2.0
 urllib3==2.6.2
 uvicorn==0.41.0
 vine==5.1.0
-wabdd==0.1.7
-wcwidth==0.2.14
-websockets==15.0.1
-whitenoise==6.12.0
-xmod==1.8.1
-yarl==1.23.0
-zipp==3.23.0
