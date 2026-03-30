@@ -88,10 +88,10 @@ STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 # --- CORS ---
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",
-    "http://127.0.0.1:3000",
-]
+# Read allowed origins from the environment, defaulting to localhost if not set
+cors_env = os.getenv("CORS_ALLOWED_ORIGINS", "http://localhost:3000,http://127.0.0.1:3000")
+CORS_ALLOWED_ORIGINS = cors_env.split(",")
+
 CORS_ALLOW_ALL_ORIGINS = DEBUG
 
 # --- DRF ---
